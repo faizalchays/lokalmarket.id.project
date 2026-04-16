@@ -13,8 +13,17 @@
     <nav class="glass sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
         <div class="text-3xl font-black tracking-tighter cursor-pointer flex items-center gap-2" onclick="showPage('home')">
             <i class="fas fa-fire text-orange-500 animate-pulse"></i>
-            <span class="text-white uppercase font-oswald">LOKALMARKET</span><span class="text-orange-500 uppercase font-oswald">.ID</span>
+            <span class="text-white uppercase font-oswald">LOKALMARKET</span>
+            <span class="text-orange-500 uppercase font-oswald">.ID</span>
         </div>
+    <div class="hidden md:flex space-x-10 text-xs font-bold tracking-[0.2em] uppercase text-white">
+        <button onclick="showPage('home')" class="hover:text-orange-500">home</button>
+        <button onclick="showPage('katalog')" class="hover:text-orange-500">katalog</button>
+        <button onclick="showPage('testimoni')" class="hover:text-orange-500">testimoni</button>
+    </div>
+
+    <button onclick="showPage('login')" class="btn-fire px-7 py-2.5 rounded-full text-xs font-black uppercase">Login</button>
+    </nav>
     
 </body>
 </html>
