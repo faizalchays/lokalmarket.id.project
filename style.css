@@ -12,3 +12,7 @@ background-color: var(--bg-deep);
 .font-oswald {
 font-family: 'Oswald', sans-serif;
 }
+.glass {
+background: rgba(10,10,10,0.85);
+backdrop-filter: blur(15px);
+}
