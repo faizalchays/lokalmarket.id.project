@@ -1,21 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&family=Oswald:wght@700&display=swap');
 
-:root {
-  --fire-primary: #ff4d00;
-  --bg-deep: #050505;
+:root { 
+    --fire-primary: #ff4d00; 
+    --fire-secondary: #ff8800; 
+    --bg-deep: #050505; 
 }
 
-body {
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  background-color: var(--bg-deep);
+body { 
+    font-family: 'Plus Jakarta Sans', sans-serif; 
+    background-color: var(--bg-deep); 
+    scroll-behavior: smooth; 
 }
 
-.font-oswald {
-  font-family: 'Oswald', sans-serif;
+h1, h2, .font-oswald { 
+    font-family: 'Oswald', sans-serif; 
 }
 
-.glass {
-  background: rgba(10, 10, 10, 0.85);
-  backdrop-filter: blur(15px);
+.glass { 
+    background: rgba(10, 10, 10, 0.85); 
+    backdrop-filter: blur(15px); 
+    border-bottom: 2px solid #ff4d0033; 
 }
-

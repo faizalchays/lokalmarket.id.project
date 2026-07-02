@@ -1,79 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZION MARKET | PREMIUM ACC</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOKALMARKET.ID | PREMIUM ACC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-zinc-950 text-gray-100 antialiased">
-  <nav class="glass sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
-    <div class="text-3xl font-black tracking-tighter cursor-pointer flex items-center gap-2" onclick="showPage('home')">
-      <i class="fas fa-fire text-orange-500 animate-pulse"></i>
-      <span class="text-white uppercase font-oswald">ZION</span>
-      <span class="text-orange-500 uppercase font-oswald">MARKET</span>
-    </div>
+<body class="text-gray-100 italic">
 
-    <div class="hidden md:flex space-x-8 text-xs font-bold tracking-[0.2em] uppercase text-white">
-      <button data-page="home" onclick="showPage('home')" class="nav-link hover:text-orange-500">Home</button>
-      <button data-page="katalog" onclick="showPage('katalog')" class="nav-link hover:text-orange-500">Katalog</button>
-      <button data-page="testimoni" onclick="showPage('testimoni')" class="nav-link hover:text-orange-500">Testimoni</button>
-    </div>
-
-    <button onclick="showPage('login')" class="btn-fire px-7 py-2.5 rounded-full text-xs font-black uppercase">
-      Login
-    </button>
-  </nav>
-
-  <main class="px-6 py-10">
-    <section id="home" class="page-section active">
-      <div class="max-w-6xl mx-auto text-center py-20">
-        <h1 class="text-5xl sm:text-6xl font-black mb-6">ZION MARKET</h1>
-        <p class="text-zinc-300 max-w-2xl mx-auto text-lg sm:text-xl">
-          Marketplace premium untuk akun dan digital goods. Klik menu di atas untuk melihat katalog, testimoni, atau login.
-        </p>
-      </div>
-    </section>
-
-    <section id="katalog" class="page-section">
-      <div class="max-w-6xl mx-auto py-20">
-        <h2 class="text-4xl font-black mb-8">Katalog</h2>
-        <div class="grid gap-6 md:grid-cols-2">
-          <article class="rounded-3xl bg-zinc-900 p-6 shadow-xl shadow-black/20">
-            <h3 class="text-2xl font-bold mb-2">Akun Premium</h3>
-            <p class="text-zinc-400 mb-4">Akun game dengan level tinggi dan skin langka.</p>
-            <button onclick="openDetail('Akun Premium', 'Rp 350.000', 'Level 50, skin eksklusif, 2 hero terkunci', 'https://via.placeholder.com/400')" class="btn-fire px-5 py-3 rounded-full text-sm font-black uppercase">
-              Lihat Detail
-            </button>
-          </article>
-          <article class="rounded-3xl bg-zinc-900 p-6 shadow-xl shadow-black/20">
-            <h3 class="text-2xl font-bold mb-2">Bundle Eksklusif</h3>
-            <p class="text-zinc-400 mb-4">Bundle item premium untuk para kolektor.</p>
-            <button onclick="openDetail('Bundle Eksklusif', 'Rp 250.000', 'Item langka, pet, dan boost exp', 'https://via.placeholder.com/400')" class="btn-fire px-5 py-3 rounded-full text-sm font-black uppercase">
-              Lihat Detail
-            </button>
-          </article>
+    <nav class="glass sticky top-0 z-50 px-6 py-4 flex justify-between items-center">
+        <div class="text-3xl font-black tracking-tighter cursor-pointer flex items-center gap-2" onclick="showPage('home')">
+            <i class="fas fa-fire text-orange-500 animate-pulse"></i>
+            <span class="text-white uppercase font-oswald">LOKALMARKET</span><span class="text-orange-500 uppercase font-oswald">.ID</span>
         </div>
-      </div>
-    </section>
-
-    <section id="testimoni" class="page-section">
-      <div class="max-w-6xl mx-auto py-20">
-        <h2 class="text-4xl font-black mb-8">Testimoni</h2>
-        <div class="grid gap-6 md:grid-cols-2">
-          <blockquote class="rounded-3xl bg-zinc-900 p-8 text-zinc-200">
-            <p class="mb-4">"Pelayanan cepat dan akun yang diberikan sesuai deskripsi. Highly recommended!"</p>
-            <footer class="text-sm text-zinc-400">– Fajar, Jakarta</footer>
-          </blockquote>
-          <blockquote class="rounded-3xl bg-zinc-900 p-8 text-zinc-200">
-            <p class="mb-4">"Desain situsnya rapi dan proses login mudah. Aktifitas belanja jadi nyaman."</p>
-            <footer class="text-sm text-zinc-400">– Siti, Bandung</footer>
-          </blockquote>
+        <div class="hidden md:flex space-x-10 text-xs font-bold tracking-[0.2em] uppercase text-white">
+            <button onclick="showPage('home')" class="hover:text-orange-500 transition">Home</button>
+            <button onclick="showPage('katalog')" class="hover:text-orange-500 transition">Katalog</button>
+            <button onclick="showPage('testimoni')" class="hover:text-orange-500 transition">Testimoni</button>
         </div>
-      </div>
-    </section>
+        <button onclick="showPage('login')" class="btn-fire px-7 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition">Login</button>
+    </nav>
 
-</body>
-</html>
+    <div id="content">
+        <section id="home" class="page-section active">
+            <header class="relative h-[550px] flex items-center justify-center text-center px-4 overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img src="se.jpeg" class="w-full h-full object-cover opacity-40">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
+                </div>
+                <div class="relative z-10">
+                    <h1 class="text-5xl md:text-7xl font-black mb-6 uppercase italic leading-none fire-text font-oswald">TEMUKAN AKUN.<br>PILIHAN ANDA DI LOKALMARKET.ID.</h1>
+                    <button onclick="showPage('katalog')" class="btn-fire px-12 py-4 rounded-full font-black uppercase tracking-widest text-sm shadow-xl">Mulai Belanja</button>
+                </div>
+            </header>
+        </section>
+
+        <section id="katalog" class="page-section py-10 px-6 max-w-7xl mx-auto">
+            <h2 class="text-4xl font-black uppercase tracking-tighter italic mb-12 border-l-8 border-orange-600 pl-6 text-white font-oswald">READY <span class="text-orange-500">STOK</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                
+                <div class="bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-zinc-800 fire-glow transition-all duration-500 group">
+                    <div class="h-52 bg-zinc-800 relative">
+                        <img src="ff1.jpg" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-orange-600 text-[9px] font-black px-3 py-1 rounded-full uppercase italic text-white shadow-lg">EFOOTBALL</span>
