@@ -4,7 +4,11 @@ function showPage(page) {
   if (!pages.includes(page)) return;
 
   document.querySelectorAll('.page-section').forEach(section => section.classList.remove('active'));
-  document.getElementById(page).classList.add('active');
+
+  const targetSection = document.getElementById(page) || document.getElementById('home');
+  if (targetSection) {
+    targetSection.classList.add('active');
+  }
 
   document.querySelectorAll('[data-page]').forEach(button => {
     const isActive = button.getAttribute('data-page') === page;

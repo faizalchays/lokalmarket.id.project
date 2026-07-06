@@ -21,3 +21,11 @@ h1, h2, .font-oswald {
     backdrop-filter: blur(15px); 
     border-bottom: 2px solid #ff4d0033; 
 }
+
+.page-section {
+    display: none;
+}
+
+.page-section.active {
+    display: block;
+}
