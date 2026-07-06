@@ -22,10 +22,41 @@ h1, h2, .font-oswald {
     border-bottom: 2px solid #ff4d0033; 
 }
 
-.page-section {
-    display: none;
+.fire-glow:hover { 
+    border-color: var(--fire-primary); 
+    box-shadow: 0 0 25px rgba(255, 77, 0, 0.4); 
+    transform: translateY(-5px); 
 }
 
-.page-section.active {
-    display: block;
+.btn-fire { 
+    background: linear-gradient(45deg, #ff0000, #ff8800); 
+    transition: 0.3s; 
+    border: none; 
+    color: white; 
+    cursor: pointer; 
+}
+
+.btn-fire:hover { 
+    box-shadow: 0 6px 25px rgba(255, 69, 0, 0.6); 
+    filter: brightness(1.1); 
+}
+
+.fire-text { 
+    background: linear-gradient(to bottom, #fff 20%, #ff8800 50%, #ff4d00 80%); 
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent; 
+}
+
+.page-section { 
+    display: none; 
+}
+
+.page-section.active { 
+    display: block; 
+    animation: flameIn 0.5s ease-out; 
+}
+
+@keyframes flameIn { 
+    from { opacity: 0; transform: scale(0.95); } 
+    to { opacity: 1; transform: scale(1); } 
 }
