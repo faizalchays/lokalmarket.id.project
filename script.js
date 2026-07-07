@@ -147,6 +147,7 @@ function handleLogin(event) {
     alert('Username atau Password salah!');
   }
 }
+
 function openDetail(title, price, description, img) {
   if (!modal) return;
   modal.classList.remove('hidden');
@@ -278,3 +279,5 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     showPage('login');
   }
+});
+.
