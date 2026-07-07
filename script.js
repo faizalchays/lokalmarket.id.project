@@ -280,4 +280,3 @@ window.addEventListener('DOMContentLoaded', () => {
     showPage('login');
   }
 });
-.
