@@ -190,3 +190,50 @@
         </section>
     </div>
     ...
+
+    <!-- MODAL DETAIL PRODUK & FORMULIR PEMBELIAN -->
+    <div id="accountModal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4 bg-black/85 backdrop-blur-xl">
+        <div class="bg-zinc-900 w-full max-w-lg rounded-[3rem] border border-orange-600 overflow-hidden relative shadow-2xl mx-auto my-auto">
+            <button onclick="closeModal()" class="absolute top-6 right-6 text-zinc-500 hover:text-white z-10 scale-125"><i class="fas fa-times"></i></button>
+            
+            <!-- Detail Card -->
+            <div id="modalDetail">
+                <div class="h-64 relative bg-black">
+                    <img id="modalImg" src="" class="w-full h-full object-cover opacity-80">
+                    <div class="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent"></div>
+                </div>
+                <div class="px-8 mt-4">
+                    <p class="text-[8px] font-black text-orange-500 uppercase tracking-widest mb-2 italic">Gallery Preview</p>
+                    <div id="modalGallery" class="flex gap-2"></div>
+                </div>
+                <div class="p-8">
+                    <h2 id="modalTitle" class="text-2xl font-black mb-4 uppercase text-white font-oswald italic"></h2>
+                    <div id="modalSpecs" class="grid grid-cols-2 gap-4 mb-6"></div>
+                    <button onclick="showPurchaseForm()" class="w-full btn-fire py-5 rounded-2xl font-black text-white italic transition uppercase tracking-widest shadow-xl">BELI SEKARANG - <span id="modalPrice"></span></button>
+                </div>
+            </div>
+
+            <!-- Formulir Pembelian -->
+            <div id="modalForm" class="hidden p-12 text-center">
+                <h2 class="text-2xl font-black mb-6 uppercase text-orange-500 italic font-oswald">FORMULIR PEMBELIAN</h2>
+                <form onsubmit="handleOrder(event)" class="space-y-4">
+                    <input type="hidden" id="orderItemTitle">
+                    <input type="hidden" id="orderItemPrice">
+                    
+                    <input type="text" id="buyerName" placeholder="NAMA LENGKAP" required class="w-full bg-black border border-zinc-800 rounded-xl px-5 py-4 outline-none focus:border-orange-500 text-[10px] font-black uppercase text-white tracking-widest">
+                    <input type="number" id="buyerWhatsapp" placeholder="WHATSAPP AKTIF" required class="w-full bg-black border border-zinc-800 rounded-xl px-5 py-4 outline-none focus:border-orange-500 text-[10px] font-black uppercase text-white tracking-widest">
+                    <button type="submit" class="w-full btn-fire py-4 rounded-xl font-black uppercase text-xs">KIRIM PESANAN</button>
+                </form>
+            </div>
+
+            <!-- Sukses Order -->
+            <div id="modalSuccess" class="hidden p-16 text-center">
+                <i class="fas fa-paper-plane text-5xl text-orange-500 mb-6"></i>
+                <h2 class="text-2xl font-black mb-4 uppercase text-white font-oswald italic">TERKIRIM!</h2>
+                <p class="text-zinc-500 text-[10px] uppercase font-bold tracking-widest mb-8">ADMIN AKAN MENGHUBUNGI ANDA DI WA SECEPAT KILAT!</p>
+                <button onclick="closeModal()" class="bg-white text-black px-10 py-3 rounded-xl font-black uppercase text-[10px]">OKE</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
