@@ -58,3 +58,68 @@
                         <button onclick="openDetail('STOK 1', 'Rp 850.000', 'AKUN OLD', 'https://via.placeholder.com/600x350/111827/ff8800?text=STOK+1')" class="w-full bg-zinc-800 hover:bg-orange-600 py-4 rounded-2xl font-black transition uppercase tracking-widest text-[10px]">Detail Produk</button>
                     </div>
                 </div>
+<!-- AUTH (LOGIN & REGISTER) SECTION -->
+        <section id="login" class="page-section py-20 px-6">
+            <div id="loginCard" class="max-w-md mx-auto bg-zinc-900 p-12 rounded-[3rem] border border-orange-600 shadow-2xl">
+                <!-- Form Login -->
+                <div id="loginFormArea">
+                    <h2 class="text-3xl font-black mb-8 text-center uppercase italic font-oswald text-white">LOGIN <span class="text-orange-500">ZION</span></h2>
+                    <form onsubmit="handleLogin(event)" class="space-y-4">
+                        <input type="text" id="loginUser" required class="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 outline-none focus:border-orange-500 text-xs font-black uppercase text-white tracking-widest" placeholder="USERNAME">
+                        <input type="password" id="loginPass" required class="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 outline-none focus:border-orange-500 text-xs font-black uppercase text-white tracking-widest" placeholder="PASSWORD">
+                        <button type="submit" class="w-full btn-fire py-4 rounded-2xl font-black uppercase text-xs tracking-widest">MASUK SEKARANG</button>
+                    </form>
+                    <p class="text-center text-[10px] text-zinc-500 mt-4 uppercase font-bold">Belum punya akun? <button onclick="toggleAuthForm('register')" class="text-orange-500 hover:underline">Daftar Di Sini</button></p>
+                </div>
+
+                <!-- Form Register -->
+                <div id="registerFormArea" class="hidden">
+                    <h2 class="text-3xl font-black mb-8 text-center uppercase italic font-oswald text-white">BUAT <span class="text-orange-500">AKUN</span></h2>
+                    <form onsubmit="handleRegister(event)" class="space-y-4">
+                        <input type="text" id="regUser" required class="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 outline-none focus:border-orange-500 text-xs font-black uppercase text-white tracking-widest" placeholder="USERNAME BARU">
+                        <input type="password" id="regPass" required class="w-full bg-black border border-zinc-800 rounded-2xl px-6 py-4 outline-none focus:border-orange-500 text-xs font-black uppercase text-white tracking-widest" placeholder="PASSWORD BARU">
+                        <button type="submit" class="w-full btn-fire py-4 rounded-2xl font-black uppercase text-xs tracking-widest">DAFTAR AKUN</button>
+                    </form>
+                    <p class="text-center text-[10px] text-zinc-500 mt-4 uppercase font-bold">Sudah punya akun? <button onclick="toggleAuthForm('login')" class="text-orange-500 hover:underline">Login Di Sini</button></p>
+                </div>
+
+                <!-- Login Sukses -->
+                <div id="loginSuccess" class="hidden text-center py-10">
+                    <i class="fas fa-fire-alt text-7xl text-orange-500 mb-6 animate-bounce"></i>
+                    <h2 class="text-2xl font-black mb-4 uppercase text-white font-oswald">BERHASIL MASUK!</h2>
+                    <button onclick="showPage('home')" class="bg-white text-black px-10 py-2 rounded-full font-black uppercase text-[10px]">GAS BELANJA</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- ADMIN PANEL SECTION -->
+        <section id="admin" class="page-section py-10 px-6 max-w-6xl mx-auto">
+            <h2 class="text-4xl font-black uppercase tracking-tighter italic mb-4 border-l-8 border-red-600 pl-6 text-white font-oswald">DATABASE <span class="text-red-500">BOOKING PESANAN</span></h2>
+            <p class="text-zinc-500 text-xs uppercase font-bold tracking-wider mb-8">Halaman Manajemen Internal untuk Melihat Antrean Booking Akun Game.</p>
+            
+            <div class="bg-zinc-900 border border-zinc-800 rounded-[2rem] overflow-hidden p-6 shadow-xl">
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left text-xs uppercase font-bold tracking-wider">
+                        <thead class="bg-black text-orange-500 font-oswald text-sm border-b border-zinc-800">
+                            <tr>
+                                <th class="p-4">ID Transaksi</th>
+                                <th class="p-4">Tanggal/Waktu</th>
+                                <th class="p-4">Nama Produk</th>
+                                <th class="p-4">Harga</th>
+                                <th class="p-4">Nama Pembeli</th>
+                                <th class="p-4">No. WhatsApp</th>
+                                <!-- Diperbarui: Tambah Kolom Aksi -->
+                                <th class="p-4 text-center">Aksi</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminOrderTable" class="text-zinc-300 divide-y divide-zinc-800/50">
+                            <!-- Data pesanan masuk lewat JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+                <div id="emptyState" class="hidden text-center py-12 text-zinc-600 uppercase font-bold text-xs tracking-widest">
+                    <i class="fas fa-folder-open text-4xl mb-4 block"></i> Belum ada antrean akun yang dibooking.
+                </div>
+            </div>
+        </section>
+    </div>
