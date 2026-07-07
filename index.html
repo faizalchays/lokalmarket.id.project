@@ -16,9 +16,9 @@
             <span class="text-white uppercase font-oswald">LOKALMARKET</span><span class="text-orange-500 uppercase font-oswald">.ID</span>
         </div>
         <div class="hidden md:flex space-x-10 text-xs font-bold tracking-[0.2em] uppercase text-white">
-            <button onclick="showPage('home')" class="hover:text-orange-500 transition">Home</button>
-            <button onclick="showPage('katalog')" class="hover:text-orange-500 transition">Katalog</button>
-            <button onclick="showPage('testimoni')" class="hover:text-orange-500 transition">Testimoni</button>
+            <button data-page="home" onclick="showPage('home')" class="hover:text-orange-500 transition">Home</button>
+            <button data-page="katalog" onclick="showPage('katalog')" class="hover:text-orange-500 transition">Katalog</button>
+            <button data-page="testimoni" onclick="showPage('testimoni')" class="hover:text-orange-500 transition">Testimoni</button>
         </div>
         <button onclick="showPage('login')" class="btn-fire px-7 py-2.5 rounded-full text-xs font-black uppercase tracking-widest transition">Login</button>
     </nav>
@@ -27,7 +27,7 @@
         <section id="home" class="page-section active">
             <header class="relative h-[550px] flex items-center justify-center text-center px-4 overflow-hidden">
                 <div class="absolute inset-0 z-0">
-                    <img src="se.jpeg" class="w-full h-full object-cover opacity-40">
+                    <img src="https://via.placeholder.com/1600x900/0f172a/ff8800?text=LOKALMARKET.ID" class="w-full h-full object-cover opacity-40" alt="Hero image">
                     <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-black"></div>
                 </div>
                 <div class="relative z-10">
@@ -43,37 +43,37 @@
                 
                 <div class="bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-zinc-800 fire-glow transition-all duration-500 group">
                     <div class="h-52 bg-zinc-800 relative">
-                        <img src="ff1.jpg" class="w-full h-full object-cover">
+                        <img src="https://via.placeholder.com/600x350/111827/ff8800?text=STOK+1" class="w-full h-full object-cover" alt="Stok 1">
                         <span class="absolute top-4 left-4 bg-orange-600 text-[9px] font-black px-3 py-1 rounded-full uppercase italic text-white shadow-lg">EFOOTBALL</span>
                     </div>
                     <div class="p-8 text-center">
                         <h3 class="font-black mb-1 uppercase text-lg text-white">STOK 1</h3>
                         <p class="text-2xl font-black text-orange-500 mb-6 italic">Rp 850.000</p>
-                        <button onclick="openDetail('STOK 1', 'Rp 850.000', 'AKUN OLD', 'ff1.jpeg')" class="w-full bg-zinc-800 hover:bg-orange-600 py-4 rounded-2xl font-black transition uppercase tracking-widest text-[10px]">Detail Produk</button>
+                        <button onclick="openDetail('STOK 1', 'Rp 850.000', 'AKUN OLD', 'https://via.placeholder.com/600x350/111827/ff8800?text=STOK+1')" class="w-full bg-zinc-800 hover:bg-orange-600 py-4 rounded-2xl font-black transition uppercase tracking-widest text-[10px]">Detail Produk</button>
                     </div>
                 </div>
 
                 <div class="bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-zinc-800 fire-glow transition-all duration-500 group">
                     <div class="h-52 bg-zinc-800 relative">
-                        <img src="ff4.jpg" class="w-full h-full object-cover">
+                        <img src="https://via.placeholder.com/600x350/111827/ff8800?text=STOK+2" class="w-full h-full object-cover" alt="Stok 2">
                         <span class="absolute top-4 left-4 bg-orange-600 text-[9px] font-black px-3 py-1 rounded-full uppercase italic text-white shadow-lg">EFOOTBALL</span>
                     </div>
                     <div class="p-8 text-center">
                         <h3 class="font-black mb-1 uppercase text-lg text-white">STOK 2</h3>
                         <p class="text-2xl font-black text-orange-500 mb-6 italic">Rp 450.000</p>
-                        <button onclick="openDetail('STOK 2', 'Rp 450.000', 'AKUN SULTAN', 'ff4.jpeg')" class="w-full bg-zinc-800 hover:bg-orange-600 py-4 rounded-2xl font-black transition uppercase tracking-widest text-[10px]">Detail Produk</button>
+                        <button onclick="openDetail('STOK 2', 'Rp 450.000', 'AKUN SULTAN', 'https://via.placeholder.com/600x350/111827/ff8800?text=STOK+2')" class="w-full bg-zinc-800 hover:bg-orange-600 py-4 rounded-2xl font-black transition uppercase tracking-widest text-[10px]">Detail Produk</button>
                     </div>
                 </div>
 
                 <div class="bg-zinc-900 rounded-[2.5rem] overflow-hidden border border-zinc-800 fire-glow transition-all duration-500 group">
                     <div class="h-52 bg-zinc-800 relative">
-                        <img src="ff5.jpg" class="w-full h-full object-cover">
+                        <img src="https://via.placeholder.com/600x350/111827/ff8800?text=STOK+3" class="w-full h-full object-cover" alt="Stok 3">
                         <span class="absolute top-4 left-4 bg-orange-600 text-[9px] font-black px-3 py-1 rounded-full uppercase italic text-white shadow-lg">EFOOTBALL</span>
                     </div>
                     <div class="p-8 text-center">
                         <h3 class="font-black mb-1 uppercase text-lg text-white">STOK 3</h3>
                         <p class="text-2xl font-black text-orange-500 mb-6 italic">Rp 900.000</p>
-                        <button onclick="openDetail('STOK 3', 'Rp 900.000', 'AKUN SULTAN+BANYAK ITEM LANGKA', 'ff5.jpeg')" class="w-full bg-zinc-800 hover:bg-orange-600 py-4 rounded-2xl font-black transition uppercase tracking-widest text-[10px]">Detail Produk</button>
+                        <button onclick="openDetail('STOK 3', 'Rp 900.000', 'AKUN SULTAN+BANYAK ITEM LANGKA', 'https://via.placeholder.com/600x350/111827/ff8800?text=STOK+3')" class="w-full bg-zinc-800 hover:bg-orange-600 py-4 rounded-2xl font-black transition uppercase tracking-widest text-[10px]">Detail Produk</button>
                     </div>
                 </div>
 

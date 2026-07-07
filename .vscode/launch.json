@@ -5,10 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "chrome",
+            "type": "pwa-chrome",
             "request": "launch",
-            "name": "Open index.html",
-            "file": "/workspaces/lokalmarket.id.project/index.html"
+            "name": "Launch Local Server",
+            "url": "http://127.0.0.1:8000",
+            "webRoot": "${workspaceFolder}",
+            "preLaunchTask": "Start Local Server",
+            "runtimeArgs": ["--new-window"]
         }
     ]
 }
