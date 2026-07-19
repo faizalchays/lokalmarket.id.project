@@ -275,7 +275,8 @@ window.addEventListener('DOMContentLoaded', () => {
   updateUIForAuth();
   const hash = window.location.hash.replace('#', '');
   if (isUserLoggedIn()) {
-    showPage(pages.includes(hash) && hash !== 'login' ? hash : 'home');
+    
+showPage(pages.includes(hash) && hash !== 'login' ? hash : 'home');
   } else {
     showPage('login');
   }
